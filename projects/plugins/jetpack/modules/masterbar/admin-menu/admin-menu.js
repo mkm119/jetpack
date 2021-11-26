@@ -58,15 +58,41 @@
 					}, 50 );
 				} );
 			}
+
+			const jitmDismissButton = adminMenu.querySelector( '.banner__dismiss' );
+			if ( jitmDismissButton ) {
+				jitmDismissButton.addEventListener( 'click', function ( event ) {
+					event.preventDefault();
+
+					const siteNotice = document.getElementById( 'toplevel_page_site-notices' );
+					if ( siteNotice ) {
+						siteNotice.style.display = 'none';
+					}
+
+					makeAjaxRequest(
+						'POST',
+						window.jitm_config.api_root + 'jetpack/v4/jitm',
+						'application/json',
+						JSON.stringify( {
+							id: event.target.parentNode.dataset.feature_id,
+							feature_class: event.target.parentNode.dataset.feature_class,
+						} ),
+						window.jitm_config.nonce
+					);
+				} );
+			}
 		}
 	}
 
-	function makeAjaxRequest( method, url, contentType, body ) {
+	function makeAjaxRequest( method, url, contentType, body, nonce ) {
 		var xhr = new XMLHttpRequest();
 		xhr.open( method, url, true );
 		xhr.setRequestHeader( 'X-Requested-With', 'XMLHttpRequest' );
 		if ( contentType ) {
 			xhr.setRequestHeader( 'Content-Type', contentType );
+		}
+		if ( nonce ) {
+			xhr.setRequestHeader( 'X-WP-Nonce', nonce );
 		}
 		xhr.withCredentials = true;
 		xhr.send( body );

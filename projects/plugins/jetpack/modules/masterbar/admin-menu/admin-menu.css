@@ -131,6 +131,13 @@
 	min-height: 26px;
 }
 
+#adminmenu .toplevel_page_site-notices .upsell_banner .banner__dismiss svg {
+	height: 16px;
+	width: 16px;
+	margin-top: 4px;
+	margin-left: 10px;
+}
+
 @media screen and (min-width: 782px) {
 	.folded #adminmenu .toplevel_page_site-notices .wp-menu-image {
 		display: block;

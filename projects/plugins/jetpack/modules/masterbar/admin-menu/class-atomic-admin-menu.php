@@ -272,6 +272,9 @@ class Atomic_Admin_Menu extends Admin_Menu {
 				'tracks_impression_cta_name'   => $message->tracks->display->props->cta_name,
 				'tracks_click_event_name'      => $message->tracks->click->name,
 				'tracks_click_cta_name'        => $message->tracks->click->props->cta_name,
+				'dismissible'                  => $message->is_dismissible,
+				'feature_class'                => $message->feature_class,
+				'id'                           => $message->id,
 			);
 		}
 	}
