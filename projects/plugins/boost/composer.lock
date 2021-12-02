@@ -119,7 +119,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../packages/assets",
-                "reference": "3181e0507db74e367f2788b9c71c2bb8fc1b3e33"
+                "reference": "4910028c2bbd59fd4ef3d6331e917c3b81b48dde"
             },
             "require": {
                 "automattic/jetpack-constants": "^1.6"
@@ -137,10 +137,13 @@
                     "link-template": "https://github.com/Automattic/jetpack-assets/compare/v${old}...v${new}"
                 },
                 "branch-alias": {
-                    "dev-master": "1.13.x-dev"
+                    "dev-master": "1.14.x-dev"
                 }
             },
             "autoload": {
+                "files": [
+                    "actions.php"
+                ],
                 "classmap": [
                     "src/"
                 ]
@@ -478,10 +481,10 @@
             "dist": {
                 "type": "path",
                 "url": "../../packages/lazy-images",
-                "reference": "730b58b2c3d11ad6c27ffa76dadb590e2e6cfb30"
+                "reference": "55e2f4e77d945222588b2795c321af6583de8aac"
             },
             "require": {
-                "automattic/jetpack-assets": "^1.13",
+                "automattic/jetpack-assets": "^1.14",
                 "automattic/jetpack-constants": "^1.6"
             },
             "require-dev": {
@@ -798,10 +801,10 @@
             "dist": {
                 "type": "path",
                 "url": "../../packages/tracking",
-                "reference": "fa171fe685354431ccd2c97ab5ab2ab3486c3d4a"
+                "reference": "93f6651c1abfe9d24e70fcb4c83bdd2c6df5ead5"
             },
             "require": {
-                "automattic/jetpack-assets": "^1.13",
+                "automattic/jetpack-assets": "^1.14",
                 "automattic/jetpack-options": "^1.14",
                 "automattic/jetpack-status": "^1.9",
                 "automattic/jetpack-terms-of-service": "^1.9"
